@@ -18,7 +18,7 @@
     "promotionImage": "/images/promotion.png",
     "disqus": {
       "shortName": "your-site-shortname",
-      "setting":{
+      "setting": {
         "url": "http://localhost:3000",
         "identifier": "article-id",
         "title": "Title of Your Article"
@@ -40,11 +40,11 @@
   "params": {
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By <ins> [Themefisher](https://themefisher.com/)</ins>"
+    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Statichunt",
     "meta_image": "/images/og-image.png",
     "meta_description": "Next Boilerplate"
   }
