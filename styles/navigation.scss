@@ -1,0 +1,82 @@
+body.menu-open {
+  @apply overflow-hidden pr-0;
+}
+
+
+.header {
+  @apply top-0 z-50 bg-body dark:bg-darkmode-body py-[33px] border-b dark:border-darkmode-border;
+}
+
+// navbar items
+.navbar {
+  @apply relative flex flex-wrap items-center justify-between;
+}
+
+.collapse-menu {
+  @apply fixed lg:static bg-body lg:bg-transparent dark:bg-darkmode-body items-center lg:space-x-8 lg:flex max-w-[400px] lg:max-w-full  right-0 h-[100vh] lg:h-auto top-0 w-full lg:w-auto z-10 border-l border-l-dark lg:border-l-0 p-6 lg:p-0 mx-0 transition-transform duration-300 ease-in-out; 
+}
+
+.navbar-brand {
+  @apply text-xl font-semibold text-dark;
+  image {
+    @apply max-h-full max-w-full;
+  }
+}
+
+.navbar-nav {
+  @apply mt-16 lg:mt-0;
+}
+
+.nav-item {
+  @apply mb-5 lg:mb-0 text-left;
+
+  &.active {
+    @apply bg-primary text-white;
+  }
+}
+
+
+.nav-link {
+  @apply px-6 py-2.5 text-[13.5px] capitalize font-secondary text-dark dark:text-darkmode-light  transition hover:text-white md:px-5 md:py-3 hover:bg-primary rounded-[30px] text-left lg:text-center;
+
+  &.active {
+    @apply bg-primary text-white;
+  }
+}
+
+.nav-dropdown {
+  @apply mr-0;
+}
+
+.nav-dropdown-list {
+  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-darkmode-theme-dark;
+}
+
+.nav-dropdown-item {
+  @apply mb-1.5;
+}
+
+.nav-dropdown-link {
+  @apply min-w-[150px] py-2.5 px-3.5 rounded text-base font-semibold  transition hover:text-primary hover:bg-primary/10 text-dark dark:text-darkmode-light;
+
+  &.active {
+    @apply text-primary bg-primary/10
+  }
+}
+
+// search style
+.search-icon {
+  @apply inline-block cursor-pointer p-2.5 w-10 h-10 text-xl text-white bg-primary rounded-full;
+}
+.search-modal {
+  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body dark:bg-darkmode-theme-dark opacity-0 transition md:h-full;
+  .form-input {
+    @apply h-full w-full border-0 px-4 text-lg;
+  }
+  .search-close {
+    @apply absolute top-1/2 right-2 -translate-y-1/2 p-3 text-h4;
+  }
+  &.open {
+    @apply visible opacity-100;
+  }
+}

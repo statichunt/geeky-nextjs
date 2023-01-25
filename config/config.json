@@ -1,0 +1,51 @@
+{
+  "site": {
+    "title": "Geeky Nextjs",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "150",
+    "logo_height": "39",
+    "logo_text": "Next Boilerplate"
+  },
+
+  "settings": {
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 6,
+    "summary_length": 200,
+    "blog_folder": "posts",
+    "promotionImage": "/images/promotion.png",
+    "disqus": {
+      "shortName": "your-site-shortname",
+      "setting":{
+        "url": "http://localhost:3000",
+        "identifier": "article-id",
+        "title": "Title of Your Article"
+      },
+      "enable": false
+    }
+  },
+
+  "widget": {
+    "logo": "/images/logo.png",
+    "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
+  },
+
+  "newsletter": {
+    "title": "Newsletter",
+    "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!"
+  },
+
+  "params": {
+    "tag_manager_id": "",
+    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
+    "copyright": "Designed and Developed By <ins> [Themefisher](https://themefisher.com/)</ins>"
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Next Boilerplate"
+  }
+}

@@ -1,0 +1,31 @@
+.btn {
+  @apply font-secondary inline-block border px-5 py-2 font-bold transition;
+}
+
+.btn-primary {
+  @apply bg-primary text-white rounded-[50px] px-8 py-3  relative border-0 overflow-hidden h-[48px];
+
+  &::before {
+    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px] ease-[cubic-bezier(.42,0,.58,1)];
+  }
+
+  &:hover {
+     &::before {
+      @apply w-full right-auto left-0;
+    }
+  }
+}
+
+.btn-outline-primary {
+  @apply border-primary bg-transparent hover:bg-primary hover:text-white  rounded-[50px] text-primary font-bold relative transition-all ease-[cubic-bezier(.42,0,.58,1)] duration-75 overflow-hidden;
+
+  &::before {
+    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px];
+  }
+
+  &:hover {
+     &::before {
+      @apply w-full right-auto left-0;
+    }
+  }
+}

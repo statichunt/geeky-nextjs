@@ -1,0 +1,208 @@
+// section style
+.section {
+  @apply py-16;
+}
+
+// container
+.container {
+  @apply mx-auto max-w-[1320px];
+}
+
+// form style
+.form-inputs * {
+  @apply mb-5 leading-10;
+}
+
+// social icon style
+.social-icons {
+  @apply space-x-4;
+  li {
+    @apply inline-block;
+    a {
+      @apply block h-9 w-9 rounded-full border bg-primary text-center text-white;
+      svg {
+        @apply m-auto h-9;
+      }
+    }
+  }
+}
+
+// form style
+.form-input,
+.form-textarea {
+  @apply border-0 px-0 placeholder:text-light placeholder:text-xs dark:placeholder:text-darkmode-light bg-transparent border-b  border-border dark:border-darkmode-border focus:border-primary focus:ring-transparent dark:text-darkmode-light;
+}
+
+// content style
+.content {
+  @apply prose max-w-none;
+  @apply prose-headings:mt-[.5em] prose-headings:mb-[.9em] prose-headings:font-bold prose-headings:text-dark prose-headings:dark:text-white;
+  @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
+  @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
+  @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
+  @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
+  @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-light;
+  @apply prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:dark:bg-theme-dark prose-blockquote:not-italic prose-blockquote:mb-12;
+  @apply prose-code:px-1 prose-code:text-primary;
+  @apply prose-pre:rounded-none;
+  @apply prose-strong:text-dark prose-strong:dark:text-light;
+  @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
+  @apply prose-li:text-text prose-li:dark:text-light;
+  @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
+  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-light;
+  @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
+  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-light;
+
+  img + em {
+    @apply block text-center text-gray-500 -mt-4;
+  }
+  blockquote {
+    &> p {
+      @apply text-2xl text-black relative;
+      &::after, &::before {
+        @apply content-[''] bg-[url('/images/quote.svg')] w-8 h-8 inline-block bg-[length:32px_32px] bg-no-repeat absolute;
+      }
+  
+      &::before {
+        @apply left-0 top-0;
+      }
+  
+      &::after {
+        @apply bottom-0 right-0 rotate-180;
+      }
+    }
+  }
+}
+
+
+//banner
+.banner {
+  &-title {
+    @apply font-bold lg:text-[72px] leading-[1];
+  
+    strong {
+      @apply text-primary;
+    }
+  
+    span {
+      @apply font-normal lg:text-[55px];
+    }
+  }
+}
+
+//section-title
+.section-title {
+  @apply decoration-primary decoration-wavy underline underline-offset-[10px] decoration-2	;
+}
+
+//socials
+.socials {
+  @apply flex space-x-3 2xl:space-x-6 px-6 py-1 mx-3 lg:border-x items-center lg:justify-start justify-center;
+  li {
+    @apply inline-flex;
+  }
+  a {
+    @apply inline-block hover:text-primary dark:hover:text-primary text-dark dark:text-darkmode-light  p-2;
+  }
+}
+
+.newsletter-input:focus + svg {
+  opacity: 0;
+}
+
+.sidebar-socials , footer .socials {
+  @apply border-primary
+}
+
+//experience
+.experience {
+  ul li {
+    @apply relative pl-7;
+
+    &::before {
+      @apply content-[''] absolute left-1 w-[9px] h-[9px] rounded-full bg-primary top-2.5 shadow-[0px_0px_0px_2px] shadow-primary border-2 border-white;
+    }
+  }
+}
+
+// notice
+.notice {
+  .notice-body {
+    p {
+      @apply my-0 text-[#666666] dark:text-[#cbcbcb];
+    }
+  }
+
+  &.note {
+    .notice-head {
+      @apply bg-[#6ab0de] dark:bg-[#97d6ffcc];
+    }
+    .notice-body {
+      @apply bg-[rgb(227,244,255)] dark:bg-[#97d6ff26];
+    }
+  }
+
+  &.tip {
+    .notice-head {
+      @apply bg-[#78c578] dark:bg-[#96ff96cc];
+    }
+    .notice-body {
+      @apply bg-[#e2ffe2] dark:bg-[#96ff9626];
+    }
+  }
+
+  &.info {
+    .notice-head {
+      @apply bg-[#f0b37e] dark:bg-[#ffc392cc];
+    }
+    .notice-body {
+      @apply bg-[#ffedde] dark:bg-[#ffc39226];
+    }
+  }
+
+  &.warning {
+    .notice-head {
+      @apply bg-[#e06f6c] dark:bg-[#ff918ccc];
+    }
+    .notice-body {
+      @apply bg-[#ffdad8] dark:bg-[#ff918c26];
+    }
+  }
+}
+
+
+.active-tab {
+  @apply bg-theme-light dark:bg-darkmode-theme-dark;
+}
+
+.post {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.single-blog {
+  blockquote {
+    @apply px-12 lg:px-[105px];
+
+    &> p {
+      @apply lg:text-[24px];
+      @apply text-2xl text-black relative ;
+      &::after, &::before {
+        @apply content-[''] bg-[url('/images/quote.svg')] w-8 h-8 inline-block bg-[length:32px_32px] bg-no-repeat absolute;
+      }
+  
+      &::before {
+        @apply left-0 top-0;
+        @apply -left-10 lg:-left-12;
+
+      }
+  
+      &::after {
+        @apply bottom-0 right-0 rotate-180;
+        @apply -right-10 lg:-right-8;
+      }
+    }
+  }
+}
