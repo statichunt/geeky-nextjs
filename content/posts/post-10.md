@@ -3,8 +3,6 @@ title: "My work from home workstation"
 date: 2022-04-04T05:00:00Z
 image: /images/post/post-2.png
 categories: ["programming"]
-authors: ["Linda Lanester"]
-tags: ["diy", "toy"]
 featured: false
 draft: false
 ---

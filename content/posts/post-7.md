@@ -3,8 +3,6 @@ title: "Artificial Intelligence and Robotics In A Nutshell"
 date: 2022-04-04T05:00:00Z
 image: /images/post/post-7.png
 categories: ["programming", "youtube"]
-authors: ["Linda Lanester"]
-tags: ["diy", "toy"]
 featured: false
 draft: false
 ---

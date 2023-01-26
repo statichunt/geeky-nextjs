@@ -64,7 +64,7 @@ const Home = ({
             </div>
             <div className="col-9 lg:col-6">
               <ImageFallback
-                className="mx-auto"
+                className="mx-auto object-contain"
                 src={banner.image}
                 width={548}
                 height={443}

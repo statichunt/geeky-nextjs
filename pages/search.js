@@ -1,11 +1,10 @@
 import Base from "@layouts/Baseof";
-import { getSinglePage } from "@lib/contentParser";
 import { slugify } from "@lib/utils/textConverter";
 import Post from "@partials/Post";
 import { useSearchContext } from "context/state";
 import { useRouter } from "next/router";
 
-const SearchPage = ({ authors }) => {
+const SearchPage = () => {
   const router = useRouter();
   const { query } = router;
   const keyword = slugify(query.key);
@@ -21,10 +20,6 @@ const SearchPage = ({ authors }) => {
       product.frontmatter.categories.find((category) =>
         slugify(category).includes(keyword)
       )
-    ) {
-      return product;
-    } else if (
-      product.frontmatter.tags.find((tag) => slugify(tag).includes(keyword))
     ) {
       return product;
     } else if (slugify(product.content).includes(keyword)) {
@@ -43,7 +38,7 @@ const SearchPage = ({ authors }) => {
             <div className="row">
               {searchResults.map((post, i) => (
                 <div key={`key-${i}`} className="col-12 mb-8 sm:col-6">
-                  <Post post={post} authors={authors} />
+                  <Post post={post} />
                 </div>
               ))}
             </div>
@@ -59,13 +54,3 @@ const SearchPage = ({ authors }) => {
 };
 
 export default SearchPage;
-
-// get authors data
-export const getStaticProps = () => {
-  const authors = getSinglePage("content/authors");
-  return {
-    props: {
-      authors: authors,
-    },
-  };
-};

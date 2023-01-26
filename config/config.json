@@ -16,18 +16,19 @@
     "pagination": 2,
     "summary_length": 200,
     "blog_folder": "posts",
-    "author_name": "Jhon Bravo",
-    "disqus": {
-      "shortName": "your-site-shortname",
-      "setting": {
-        "url": "http://localhost:3000",
-        "identifier": "article-id",
-        "title": "Title of Your Article"
-      },
-      "enable": false
-    }
+    "author_name": "Jhon Bravo"
+  },
+  "params": {
+    "tag_manager_id": "",
+    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
+    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
   },
 
+  "metadata": {
+    "meta_author": "Statichunt",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Next Boilerplate"
+  },
   "widgets":{
     "about": {
       "logo": "/images/logo.png",
@@ -49,19 +50,8 @@
       "enable": true
     }
   },
-
-
-  
-
-  "params": {
-    "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
-  },
-
-  "metadata": {
-    "meta_author": "Statichunt",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template"
   }
 }

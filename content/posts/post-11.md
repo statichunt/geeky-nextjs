@@ -3,8 +3,6 @@ title: "Robotic world is growing very fast"
 date: 2022-04-04T05:00:00Z
 image: /images/post/post-3.png
 categories: ["assistance"]
-authors: ["Linda Lanester"]
-tags: ["diy", "toy"]
 featured: false
 draft: false
 ---

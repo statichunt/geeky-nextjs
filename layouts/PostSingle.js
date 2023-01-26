@@ -10,7 +10,8 @@ import Sidebar from "./partials/Sidebar";
 import shortcodes from "./shortcodes/all";
 import config from "@config/config.json";
 import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
-const { disqus } = config.settings;
+const { disqus } = config;
+const { author_name } = config.settings;
 
 const PostSingle = ({
   frontmatter,
@@ -21,7 +22,7 @@ const PostSingle = ({
   allCategories,
   relatedPosts,
 }) => {
-  let { description, title, date, image, categories, authors } = frontmatter;
+  let { description, title, date, image, categories } = frontmatter;
   description = description ? description : content.slice(0, 120);
 
   return (
@@ -70,7 +71,7 @@ const PostSingle = ({
                   </li>
                   <li className="inline-flex items-center font-secondary text-xs leading-3">
                     <FaRegCalendar className="mr-1.5" />
-                    {dateFormat(post.frontmatter.date)}
+                    {dateFormat(date)}
                   </li>
                 </ul>
                 <div className="content mb-16">
@@ -83,10 +84,7 @@ const PostSingle = ({
 
           {disqus.enable && (
             <div className="row">
-              <DiscussionEmbed
-                shortname={disqus.shortname}
-                config={disqus.config}
-              />
+              <DiscussionEmbed shortname={disqus.shortname} />
             </div>
           )}
         </div>
