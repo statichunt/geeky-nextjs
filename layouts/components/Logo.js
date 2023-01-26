@@ -12,8 +12,6 @@ const Logo = ({ src }) => {
   const { theme, resolvedTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
-  console.log(logo, logo_light);
-
   return (
     <Link href="/" className="navbar-brand block">
       {src || logo ? (

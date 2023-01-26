@@ -84,7 +84,10 @@ const PostSingle = ({
 
           {disqus.enable && (
             <div className="row">
-              <DiscussionEmbed shortname={disqus.shortname} />
+              <DiscussionEmbed
+                shortname={disqus.shortname}
+                config={config.disqus.settings}
+              />
             </div>
           )}
         </div>
@@ -93,8 +96,8 @@ const PostSingle = ({
         <div className="container mt-20">
           <h2 className="h2 section-title">Related Posts</h2>
           <div className="row mt-16 justify-center">
-            {relatedPosts.map((post) => (
-              <div key={post.frontmatter.slug} className="mb-12 lg:col-4">
+            {relatedPosts.map((post, index) => (
+              <div key={"post-" + index} className="mb-12 lg:col-4">
                 <Post post={post} />
               </div>
             ))}
