@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name": "Elements",
+      "url": "/elements"
+    },
+    {
       "name": "Contact",
       "url": "/contact"
     },
@@ -20,10 +24,6 @@
         {
           "name": "Categories",
           "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "#"
         }
       ]
     }

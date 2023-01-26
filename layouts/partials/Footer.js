@@ -5,21 +5,21 @@ import social from "@config/social.json";
 import ImageFallback from "@layouts/components/ImageFallback";
 import Logo from "@layouts/components/Logo";
 import { markdownify } from "@lib/utils/textConverter";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const Footer = () => {
   const { copyright, footer_content } = config.params;
+  const { theme } = useTheme();
   return (
     <footer className="section relative mt-12 pt-[70px] pb-[50px]">
       <ImageFallback
         className="-z-[1] object-cover object-left dark:hidden md:object-top"
-        src="/images/footer-bg-shape.svg"
-        alt=""
-        fill={true}
-      />
-      <ImageFallback
-        className="-z-[1] hidden object-cover object-left dark:block md:object-top"
-        src="/images/footer-bg-shape-dark.svg"
+        src={
+          theme === "dark"
+            ? "/images/footer-bg-shape-dark.svg"
+            : "/images/footer-bg-shape.svg"
+        }
         alt=""
         fill={true}
       />

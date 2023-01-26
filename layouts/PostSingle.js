@@ -9,6 +9,7 @@ import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
 import shortcodes from "./shortcodes/all";
 import config from "@config/config.json";
+import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 const { disqus } = config.settings;
 
 const PostSingle = ({
@@ -57,44 +58,19 @@ const PostSingle = ({
                   </ul>
                 </div>
                 {markdownify(title, "h1", "lg:text-[42px] mt-16")}
-                <ul className="mt-4 flex items-center space-x-4">
+                <ul className="flex items-center space-x-4">
                   <li>
                     <Link
-                      className="inline-flex items-center text-xs font-bold leading-[12px]"
-                      href="#"
+                      className="inline-flex items-center font-secondary text-xs leading-3"
+                      href="/about"
                     >
-                      <svg
-                        className="mr-1"
-                        width="12px"
-                        height="12px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M12.0002 14.5C6.99016 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      {authors}
+                      <FaUserAlt className="mr-1.5" />
+                      {author_name}
                     </Link>
                   </li>
-                  <li className="inline-flex items-center text-xs font-bold leading-[12px]">
-                    <svg
-                      className="mr-1"
-                      fill="currentColor"
-                      width="12px"
-                      height="12px"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z" />
-                    </svg>
-                    {dateFormat(date)}
+                  <li className="inline-flex items-center font-secondary text-xs leading-3">
+                    <FaRegCalendar className="mr-1.5" />
+                    {dateFormat(post.frontmatter.date)}
                   </li>
                 </ul>
                 <div className="content mb-16">

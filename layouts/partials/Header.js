@@ -5,6 +5,7 @@ import socical from "@config/social.json";
 import Social from "@layouts/components/Social";
 import ThemeSwitcher from "@layouts/components/ThemeSwitcher";
 import SearchModal from "@partials/SearchModal";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ const Header = () => {
   const { main } = menu;
 
   //logo
-  const { logo } = config.site;
+  const { logo, logo_light } = config.site;
 
   // states declaration
   const [searchModal, setSearchModal] = useState(false);
@@ -23,6 +24,7 @@ const Header = () => {
 
   // Router
   const router = useRouter();
+  const theme = useTheme();
 
   //stop scrolling when nav is open
   useEffect(() => {
@@ -37,9 +39,8 @@ const Header = () => {
     <>
       <header className="header">
         <nav className="navbar container">
-          {/* logo */}
           <div className="order-0">
-            <Logo src={logo} />
+            <Logo src={theme === "dark" ? logo_light : logo} />
           </div>
           <div className="flex items-center space-x-5 lg:space-x-8">
             <div
@@ -82,7 +83,7 @@ const Header = () => {
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                           </svg>
                         </span>
-                        <ul className="nav-dropdown-list hidden transition-all duration-300 group-hover:top-[44px] group-hover:block md:invisible md:absolute md:top-[60px] md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+                        <ul className="nav-dropdown-list hidden transition-all duration-300 group-hover:top-[46px] group-hover:block md:invisible md:absolute md:top-[60px] md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                           {menu.children.map((child, i) => (
                             <li
                               className="nav-dropdown-item"

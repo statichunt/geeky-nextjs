@@ -78,14 +78,16 @@
 //banner
 .banner {
   &-title {
-    @apply font-bold lg:text-[72px] leading-[1];
+    h1 {
+      @apply font-bold lg:text-[72px] leading-[1];
+    }
   
     strong {
       @apply text-primary;
     }
   
     span {
-      @apply font-normal lg:text-[55px];
+      @apply font-normal lg:text-[55px] font-bold text-dark dark:text-darkmode-light;
     }
   }
 }
@@ -97,12 +99,12 @@
 
 //socials
 .socials {
-  @apply flex space-x-3 2xl:space-x-6 px-6 py-1 mx-3 lg:border-x items-center lg:justify-start justify-center;
+  @apply flex space-x-3 2xl:space-x-4 px-4  mx-3 lg:border-x items-center lg:justify-start justify-center;
   li {
     @apply inline-flex;
   }
   a {
-    @apply inline-block hover:text-primary dark:hover:text-primary text-dark dark:text-darkmode-light  p-2;
+    @apply inline-block hover:text-primary dark:hover:text-primary text-dark dark:text-darkmode-light  px-2 py-1 text-lg;
   }
 }
 

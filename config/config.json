@@ -4,6 +4,7 @@
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
+    "logo_light": "/images/logo-light.png",
     "logo_width": "150",
     "logo_height": "39",
     "logo_text": "Next Boilerplate"
@@ -15,7 +16,7 @@
     "pagination": 6,
     "summary_length": 200,
     "blog_folder": "posts",
-    "promotionImage": "/images/promotion.png",
+    "author_name": "Jhon Bravo",
     "disqus": {
       "shortName": "your-site-shortname",
       "setting": {
@@ -27,15 +28,30 @@
     }
   },
 
-  "widget": {
-    "logo": "/images/logo.png",
-    "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
+  "widgets":{
+    "about": {
+      "logo": "/images/logo.png",
+      "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper.",
+      "enable": true
+    },
+    "featured_posts": {
+      "title": "Blog Categories",
+      "showPost": 5,
+      "enable": true
+    },
+    "categories": {
+      "title": "Blog Categories",
+      "enable": true
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
+      "enable": true
+    }
   },
 
-  "newsletter": {
-    "title": "Newsletter",
-    "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!"
-  },
+
+  
 
   "params": {
     "tag_manager_id": "",
