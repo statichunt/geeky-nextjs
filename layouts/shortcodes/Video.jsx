@@ -1,7 +1,7 @@
 function Video({ title, width = 500, height = "auto", src, ...rest }) {
   return (
     <video
-      className="overflow-hidden"
+      className="overflow-hidden rounded"
       width={width}
       height={height}
       controls

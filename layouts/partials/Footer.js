@@ -10,13 +10,13 @@ import Link from "next/link";
 
 const Footer = () => {
   const { copyright, footer_content } = config.params;
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   return (
     <footer className="section relative mt-12 pt-[70px] pb-[50px]">
       <ImageFallback
         className="-z-[1] object-cover object-left dark:hidden md:object-top"
         src={
-          theme === "dark"
+          theme === "dark" || resolvedTheme === "dark"
             ? "/images/footer-bg-shape-dark.svg"
             : "/images/footer-bg-shape.svg"
         }

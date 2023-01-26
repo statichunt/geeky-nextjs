@@ -24,7 +24,6 @@ const Header = () => {
 
   // Router
   const router = useRouter();
-  const theme = useTheme();
 
   //stop scrolling when nav is open
   useEffect(() => {
@@ -40,7 +39,7 @@ const Header = () => {
       <header className="header">
         <nav className="navbar container">
           <div className="order-0">
-            <Logo src={theme === "dark" ? logo_light : logo} />
+            <Logo />
           </div>
           <div className="flex items-center space-x-5 lg:space-x-8">
             <div

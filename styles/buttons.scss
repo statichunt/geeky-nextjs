@@ -1,9 +1,9 @@
 .btn {
-  @apply font-secondary inline-block border px-5 py-2 font-bold transition;
+  @apply font-secondary inline-block border px-5 py-2.5 font-bold transition;
 }
 
 .btn-primary {
-  @apply bg-primary text-white rounded-[50px] px-8 py-3  relative border-0 overflow-hidden h-12;
+  @apply bg-primary text-white rounded-[50px] px-8 py-2.5  relative border-0 overflow-hidden h-12;
 
   &::before {
     @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px] ease-[cubic-bezier(.42,0,.58,1)];

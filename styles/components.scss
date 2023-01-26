@@ -42,9 +42,11 @@
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
   @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-light;
-  @apply prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:dark:bg-theme-dark prose-blockquote:not-italic prose-blockquote:mb-12;
+  @apply prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:lg:px-16 prose-blockquote:rounded prose-blockquote:dark:bg-theme-dark prose-blockquote:not-italic prose-blockquote:mb-12;
   @apply prose-code:px-1 prose-code:text-primary;
-  @apply prose-pre:rounded-none;
+  @apply prose-pre:rounded;
+  @apply prose-img:rounded;
+  @apply prose-table:rounded;
   @apply prose-strong:text-dark prose-strong:dark:text-light;
   @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
   @apply prose-li:text-text prose-li:dark:text-light;
@@ -60,11 +62,11 @@
     &> p {
       @apply text-2xl text-black relative;
       &::after, &::before {
-        @apply content-[''] bg-[url('/images/quote.svg')] w-8 h-8 inline-block bg-[length:32px_32px] bg-no-repeat absolute;
+        @apply content-[''] bg-[url('/images/quote.svg')] w-5 lg:w-8 h-5 lg:h-8 inline-block bg-[length:20px_20px] lg:bg-[length:32px_32px] bg-no-repeat absolute;
       }
   
       &::before {
-        @apply left-0 top-0;
+        @apply -left-10 lg:-left-10 top-0;
       }
   
       &::after {
@@ -129,6 +131,7 @@
 
 // notice
 .notice {
+  @apply rounded overflow-x-hidden;
   .notice-body {
     p {
       @apply my-0 text-[#666666] dark:text-[#cbcbcb];
