@@ -5,7 +5,6 @@ import socical from "@config/social.json";
 import Social from "@layouts/components/Social";
 import ThemeSwitcher from "@layouts/components/ThemeSwitcher";
 import SearchModal from "@partials/SearchModal";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -16,7 +15,7 @@ const Header = () => {
   const { main } = menu;
 
   //logo
-  const { logo, logo_light } = config.site;
+  const { logo, logo_white } = config.site;
 
   // states declaration
   const [searchModal, setSearchModal] = useState(false);

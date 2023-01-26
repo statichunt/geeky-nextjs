@@ -4,16 +4,15 @@
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
-    "logo_light": "/images/logo-light.png",
+    "logo_white": "/images/logo-light.png",
     "logo_width": "150",
     "logo_height": "39",
-    "logo_text": "Next Boilerplate"
+    "logo_text": "Geeky"
   },
-
   "settings": {
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 2,
+    "pagination": 6,
     "summary_length": 200,
     "blog_folder": "posts",
     "author_name": "Jhon Bravo"
@@ -23,31 +22,30 @@
     "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
     "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
   },
-
   "metadata": {
     "meta_author": "Statichunt",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_description": "Geeky Nextjs Personal Blog Template"
   },
-  "widgets":{
+  "widgets": {
     "about": {
+      "enable": true,
       "logo": "/images/logo.png",
-      "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper.",
-      "enable": true
+      "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
     },
     "featured_posts": {
+      "enable": true,
       "title": "Blog Categories",
-      "showPost": 5,
-      "enable": true
+      "showPost": 3
     },
     "categories": {
-      "title": "Blog Categories",
-      "enable": true
+      "enable": true,
+      "title": "Blog Categories"
     },
     "newsletter": {
+      "enable": true,
       "title": "Newsletter",
-      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
-      "enable": true
+      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!"
     }
   },
   "disqus": {

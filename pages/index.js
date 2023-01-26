@@ -137,11 +137,7 @@ const Home = ({
                   href={promotion.link}
                   className="d-block relative mt-11 mb-11 h-[122px]"
                 >
-                  <ImageFallback
-                    src={promotion.image}
-                    alt="promotion"
-                    layout="fill"
-                  />
+                  <ImageFallback fill src={promotion.image} alt="promotion" />
                 </Link>
               )}
 

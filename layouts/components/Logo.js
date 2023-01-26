@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const Logo = ({ src }) => {
   // destructuring items from config object
-  const { logo, logo_light, logo_width, logo_height, logo_text, title } =
+  const { logo, logo_white, logo_width, logo_height, logo_text, title } =
     config.site;
   const [mounted, setMounted] = useState(false);
   const { theme, resolvedTheme } = useTheme();
@@ -20,7 +20,7 @@ const Logo = ({ src }) => {
           height={logo_height.replace("px", "") * 2}
           src={
             mounted && (theme === "dark" || resolvedTheme === "dark")
-              ? logo_light
+              ? logo_white
               : logo
           }
           alt={title}

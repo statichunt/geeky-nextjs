@@ -14,7 +14,6 @@ const Authors = ({ authors }) => {
                 alt={author.frontmatter.title}
                 height="150px"
                 width="150px"
-                layout="fixed"
                 className="rounded-lg"
               />
             </div>
