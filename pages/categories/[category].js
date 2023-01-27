@@ -8,7 +8,13 @@ import Post from "@partials/Post";
 const { blog_folder } = config.settings;
 
 // category page
-const Category = ({ category, posts, authors, categories }) => {
+const Category = ({
+  postsByCategories,
+  category,
+  posts,
+  authors,
+  categories,
+}) => {
   return (
     <Base title={category}>
       <div className="section mt-16">
@@ -22,7 +28,7 @@ const Category = ({ category, posts, authors, categories }) => {
           <div className="row">
             <div className="lg:col-8">
               <div className="row rounded border border-border p-4 px-3 dark:border-darkmode-border lg:p-6">
-                {posts.map((post, i) => (
+                {postsByCategories.map((post, i) => (
                   <div key={`key-${i}`} className="col-12 mb-8 sm:col-6">
                     <Post post={post} authors={authors} />
                   </div>
@@ -75,7 +81,8 @@ export const getStaticProps = ({ params }) => {
 
   return {
     props: {
-      posts: filterPosts,
+      posts,
+      postsByCategories: filterPosts,
       category: params.category,
       authors: authors,
       categories: categoriesWithPostsCount,

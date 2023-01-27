@@ -151,7 +151,8 @@ const Sidebar = ({ posts, categories }) => {
                 .map((post, i, arr) => (
                   <div
                     className={`flex items-center pb-6 ${
-                      i !== arr.length - 1 && "mb-6 border-b"
+                      i !== arr.length - 1 &&
+                      "mb-6 border-b dark:border-b-darkmode-border"
                     }`}
                     key={`key-${i}`}
                   >
