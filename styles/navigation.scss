@@ -13,7 +13,7 @@ body.menu-open {
 }
 
 .collapse-menu {
-  @apply fixed lg:static bg-body lg:bg-transparent dark:bg-darkmode-body items-center lg:space-x-8 lg:flex max-w-[400px] lg:max-w-full  right-0 h-[100vh] lg:h-auto top-0 w-full lg:w-auto z-10 border-l border-l-dark lg:border-l-0 p-6 lg:p-0 mx-0 transition-transform duration-300 ease-in-out; 
+  @apply fixed lg:static bg-body lg:bg-transparent dark:bg-darkmode-body items-center lg:space-x-4 xl:space-x-8 lg:flex max-w-[400px] lg:max-w-full  right-0 h-[100vh] lg:h-auto top-0 w-full lg:w-auto z-10 border-l border-l-dark lg:border-l-0 p-6 lg:p-0 mx-0 transition-transform duration-300 ease-in-out; 
 }
 
 .navbar-brand {
@@ -37,7 +37,7 @@ body.menu-open {
 
 
 .nav-link {
-  @apply px-6 py-2.5 text-[13.5px] capitalize font-secondary text-dark dark:text-darkmode-light  transition hover:text-white md:px-5 md:py-3 hover:bg-primary rounded-[30px] text-left lg:text-center;
+  @apply px-6 py-2.5 text-[13.5px] capitalize font-secondary text-dark dark:text-darkmode-light  transition hover:text-white md:px-3 xl:px-5 md:py-3 hover:bg-primary rounded-[30px] text-left lg:text-center;
 
   &.active {
     @apply bg-primary text-white;

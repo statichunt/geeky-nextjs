@@ -79,7 +79,10 @@ const PostSingle = ({
                 </div>
               </article>
             </div>
-            <Sidebar posts={posts} categories={allCategories} />
+            <Sidebar
+              posts={posts.filter((post) => post.slug !== slug)}
+              categories={allCategories}
+            />
           </div>
 
           {disqus.enable && (

@@ -40,7 +40,7 @@ const Header = () => {
           <div className="order-0">
             <Logo />
           </div>
-          <div className="flex items-center space-x-5 lg:space-x-8">
+          <div className="flex items-center space-x-4 xl:space-x-8">
             <div
               className={`collapse-menu  ${
                 !showMenu && "translate-x-full"
@@ -60,7 +60,7 @@ const Header = () => {
               </button>
               <ul
                 id="nav-menu"
-                className="navbar-nav w-full md:w-auto md:space-x-2 lg:flex"
+                className="navbar-nav w-full md:w-auto md:space-x-1 lg:flex xl:space-x-2"
               >
                 {main.map((menu, i) => (
                   <React.Fragment key={`menu-${i}`}>

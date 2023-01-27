@@ -9,10 +9,10 @@ import { getTaxonomy } from "@lib/taxonomyParser";
 import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
+import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaCalendar } from "react-icons/fa";
-import bannerShapeDark from "../public/images/banner-bg-shape-dark.svg";
-import bannerShape from "../public/images/banner-bg-shape.svg";
 const { blog_folder, author_name, pagination } = config.settings;
 
 const Home = ({
@@ -30,22 +30,28 @@ const Home = ({
   );
   const showPosts = pagination;
 
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <Base>
       {/* Banner */}
       <section className="section banner relative pb-0">
         <ImageFallback
-          className="absolute bottom-0 left-0 z-[-1] w-full dark:hidden"
-          src={bannerShape}
+          className="absolute bottom-0 left-0 z-[-1] w-full"
+          src={
+            mounted && (theme === "dark" || resolvedTheme === "dark")
+              ? "/images/banner-bg-shape-dark.svg"
+              : "/images/banner-bg-shape.svg"
+          }
+          width={1905}
+          height={295}
           alt="banner-shape"
           priority
         />
-        <ImageFallback
-          className="absolute bottom-0 left-0 z-[-1] hidden w-full dark:block"
-          src={bannerShapeDark}
-          alt="banner-shape"
-          priority
-        />
+
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
             <div className="mt-12 text-center lg:mt-0 lg:text-left lg:col-6">
@@ -135,7 +141,7 @@ const Home = ({
               {promotion.enable && (
                 <Link
                   href={promotion.link}
-                  className="d-block relative mt-11 mb-11 h-[122px]"
+                  className="relative mt-11 mb-11 block h-[122px]"
                 >
                   <ImageFallback fill src={promotion.image} alt="promotion" />
                 </Link>

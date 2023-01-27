@@ -8,8 +8,8 @@ const Logo = ({ src }) => {
   // destructuring items from config object
   const { logo, logo_white, logo_width, logo_height, logo_text, title } =
     config.site;
-  const [mounted, setMounted] = useState(false);
   const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   return (

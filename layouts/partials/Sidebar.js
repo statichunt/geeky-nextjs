@@ -111,41 +111,43 @@ const Sidebar = ({ posts, categories }) => {
             </button>
           </div>
           {showRecent
-            ? sortPostByDate.slice(0, 5).map((post, i, arr) => (
-                <div
-                  className={`flex items-center ${
-                    i !== arr.length - 1 &&
-                    "mb-6 border-b border-border pb-6 dark:border-darkmode-border"
-                  }`}
-                  key={`key-${i}`}
-                >
-                  {post.frontmatter.image && (
-                    <ImageFallback
-                      className="mr-3 h-[85px] w-[85px] rounded-full object-cover"
-                      src={post.frontmatter.image}
-                      alt={post.frontmatter.title}
-                      width={105}
-                      height={85}
-                    />
-                  )}
-                  <div>
-                    <h3 className="h5 mb-2">
-                      <Link
-                        href={`/${blog_folder}/${post.slug}`}
-                        className="block hover:text-primary"
-                      >
-                        {post.frontmatter.title}
-                      </Link>
-                    </h3>
-                    <p className="inline-flex items-center font-secondary text-xs">
-                      <FaRegCalendar className="mr-1.5" />
-                      {dateFormat(post.frontmatter.date)}
-                    </p>
+            ? sortPostByDate
+                .slice(0, featured_posts.showPost)
+                .map((post, i, arr) => (
+                  <div
+                    className={`flex items-center ${
+                      i !== arr.length - 1 &&
+                      "mb-6 border-b border-border pb-6 dark:border-darkmode-border"
+                    }`}
+                    key={`key-${i}`}
+                  >
+                    {post.frontmatter.image && (
+                      <ImageFallback
+                        className="mr-3 h-[85px] w-[85px] rounded-full object-cover"
+                        src={post.frontmatter.image}
+                        alt={post.frontmatter.title}
+                        width={105}
+                        height={85}
+                      />
+                    )}
+                    <div>
+                      <h3 className="h5 mb-2">
+                        <Link
+                          href={`/${blog_folder}/${post.slug}`}
+                          className="block hover:text-primary"
+                        >
+                          {post.frontmatter.title}
+                        </Link>
+                      </h3>
+                      <p className="inline-flex items-center font-secondary text-xs">
+                        <FaRegCalendar className="mr-1.5" />
+                        {dateFormat(post.frontmatter.date)}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))
+                ))
             : featuredPosts
-                .slice(1, featured_posts.showPost)
+                .slice(0, featured_posts.showPost)
                 .map((post, i, arr) => (
                   <div
                     className={`flex items-center pb-6 ${
@@ -171,7 +173,10 @@ const Sidebar = ({ posts, categories }) => {
                           {post.frontmatter.title}
                         </Link>
                       </h3>
-                      <p>{dateFormat(post.frontmatter.date)}</p>
+                      <p className="inline-flex items-center font-secondary text-xs">
+                        <FaRegCalendar className="mr-1.5" />
+                        {dateFormat(post.frontmatter.date)}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -201,7 +206,12 @@ const Sidebar = ({ posts, categories }) => {
           </form>
           <p className="text-xs">
             By Singing Up, You Agree To
-            <span className="ml-1 text-primary">Privacy Policy</span>
+            <Link
+              href={newsletter.privacy_policy_page}
+              className="ml-1 text-primary"
+            >
+              Privacy Policy
+            </Link>
           </p>
         </div>
       )}
