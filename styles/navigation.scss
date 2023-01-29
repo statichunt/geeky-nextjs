@@ -80,3 +80,10 @@ body.menu-open {
     @apply visible opacity-100;
   }
 }
+
+
+.light .menu-open {
+  .border-border, &.border-border {
+    @apply border-darkmode-border;
+  }
+}

@@ -40,7 +40,7 @@ const Contact = ({ data }) => {
               "h1 my-10 lg:my-11 lg:pt-11 text-center lg:text-left lg:text-[64px]"
             )}
           </div>
-          <div className="rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
+          <div className="contact-form-wrapper rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
             <h2>
               Send Us A
               <span className="ml-1.5 inline-flex items-center text-primary">
