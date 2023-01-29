@@ -78,21 +78,20 @@ const PostSingle = ({
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
               </article>
+              <div className="mt-16">
+                {disqus.enable && (
+                  <DiscussionEmbed
+                    shortname={disqus.shortname}
+                    config={config.disqus.settings}
+                  />
+                )}
+              </div>
             </div>
             <Sidebar
               posts={posts.filter((post) => post.slug !== slug)}
               categories={allCategories}
             />
           </div>
-        </div>
-
-        <div className="container">
-          {disqus.enable && (
-            <DiscussionEmbed
-              shortname={disqus.shortname}
-              config={config.disqus.settings}
-            />
-          )}
         </div>
 
         {/* Related posts */}
