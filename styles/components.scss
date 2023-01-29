@@ -47,13 +47,13 @@
   @apply prose-pre:rounded;
   @apply prose-img:rounded;
   @apply prose-table:rounded;
-  @apply prose-strong:text-dark prose-strong:dark:text-light;
+  @apply prose-strong:text-dark prose-strong:dark:text-darkmode-light;
   @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
-  @apply prose-li:text-text prose-li:dark:text-light;
+  @apply prose-li:text-text prose-li:dark:text-darkmode-light;
   @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
-  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-light;
+  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-darkmode-light;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
-  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-light;
+  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-light;
 
   img + em {
     @apply block text-center text-gray-500 -mt-4;
@@ -133,8 +133,9 @@
 .notice {
   @apply rounded overflow-x-hidden;
   .notice-body {
+    @apply text-[#666666] dark:text-darkmode-light;
     p {
-      @apply my-0 text-[#666666] dark:text-[#cbcbcb];
+      @apply my-0 text-[#666666] dark:text-darkmode-light;
     }
   }
 

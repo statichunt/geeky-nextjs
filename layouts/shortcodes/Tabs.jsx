@@ -31,7 +31,7 @@ function Tabs({ children }) {
         {children.map((item, index) => (
           <li
             key={index}
-            className={` m-0 cursor-pointer rounded px-8 py-3 font-bold  text-dark dark:text-light ${
+            className={` m-0 cursor-pointer rounded px-8 py-3 font-bold  text-dark dark:text-darkmode-light ${
               index === 0 && "active-tab"
             }`}
             onClick={(e) => handleChangTab(e, index)}

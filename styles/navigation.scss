@@ -49,7 +49,7 @@ body.menu-open {
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-darkmode-theme-dark;
+  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-black;
 }
 
 .nav-dropdown-item {
@@ -69,7 +69,7 @@ body.menu-open {
   @apply inline-block cursor-pointer p-2.5 w-10 h-10 text-xl text-white bg-primary rounded-full;
 }
 .search-modal {
-  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body dark:bg-darkmode-theme-dark opacity-0 transition md:h-full;
+  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body dark:bg-black opacity-0 transition md:h-full;
   .form-input {
     @apply h-full w-full border-0 px-4 text-lg;
   }
