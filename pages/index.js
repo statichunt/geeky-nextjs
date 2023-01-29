@@ -12,7 +12,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaCalendar } from "react-icons/fa";
+import { FaRegCalendar } from "react-icons/fa";
 const { blog_folder, author_name, pagination } = config.settings;
 
 const Home = ({
@@ -126,7 +126,7 @@ const Home = ({
                                 </Link>
                               </h3>
                               <p className="inline-flex items-center font-bold">
-                                <FaCalendar />
+                                <FaRegCalendar className="mr-1.5" />
                                 {dateFormat(post.frontmatter.date)}
                               </p>
                             </div>

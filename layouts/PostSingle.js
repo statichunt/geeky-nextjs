@@ -84,22 +84,22 @@ const PostSingle = ({
               categories={allCategories}
             />
           </div>
+        </div>
 
+        <div className="container">
           {disqus.enable && (
-            <div className="row">
-              <DiscussionEmbed
-                shortname={disqus.shortname}
-                config={config.disqus.settings}
-              />
-            </div>
+            <DiscussionEmbed
+              shortname={disqus.shortname}
+              config={config.disqus.settings}
+            />
           )}
         </div>
 
         {/* Related posts */}
         <div className="container mt-20">
           <h2 className="h2 section-title">Related Posts</h2>
-          <div className="row mt-16 justify-center">
-            {relatedPosts.map((post, index) => (
+          <div className="row mt-16">
+            {relatedPosts.slice(0, 3).map((post, index) => (
               <div key={"post-" + index} className="mb-12 lg:col-4">
                 <Post post={post} />
               </div>

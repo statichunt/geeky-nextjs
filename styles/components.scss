@@ -54,6 +54,7 @@
   @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-darkmode-light;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
   @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-light;
+  @apply prose-li:marker:dark:text-darkmode-light;
 
   img + em {
     @apply block text-center text-gray-500 -mt-4;
@@ -211,4 +212,7 @@
       }
     }
   }
+}
+#disqus_thread  {
+  @apply p-6 bg-body ;
 }
