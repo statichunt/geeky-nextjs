@@ -49,7 +49,7 @@ body.menu-open {
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-black;
+  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-black border border-transparent dark:border-darkmode-border;
 }
 
 .nav-dropdown-item {
