@@ -48,7 +48,7 @@ const Contact = ({ data }) => {
                 <BsArrowRightShort />
               </span>
             </h2>
-            <MailchimpSubscribe
+            {/* <MailchimpSubscribe
               url="xxxx.us13.list-manage.com/subscribe/post?u=zefzefzef&id=fnfgn"
               render={({ subscribe, status, message }) => (
                 <CustomForm
@@ -57,7 +57,72 @@ const Contact = ({ data }) => {
                   message={message}
                 />
               )}
-            />
+            /> */}
+            <form className="contact-form mt-12">
+              <div className="mb-6">
+                <label className="mb-2 block font-secondary" htmlFor="name">
+                  Full name
+                  <small className="font-secondary text-sm text-primary">
+                    *
+                  </small>
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="name"
+                  type="text"
+                  placeholder="Thomas Milano"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label className="mb-2 block font-secondary" htmlFor="email">
+                  Email Address
+                  <small className="font-secondary text-sm text-primary">
+                    *
+                  </small>
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="email"
+                  type="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label className="mb-2 block font-secondary" htmlFor="subject">
+                  Subject
+                  <small className="font-secondary text-sm text-primary">
+                    *
+                  </small>
+                </label>
+                <input
+                  className="form-input w-full"
+                  name="subject"
+                  type="text"
+                  placeholder="Blog advertisement"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label className="mb-2 block font-secondary" htmlFor="message">
+                  Your Message Here
+                  <small className="font-secondary text-sm text-primary">
+                    *
+                  </small>
+                </label>
+                <textarea
+                  className="form-textarea w-full"
+                  placeholder="Hello I’m Mr ‘x’ from………….."
+                  rows="7"
+                />
+              </div>
+              <input
+                className="btn btn-primary"
+                type="submit"
+                value="Send Now"
+              />
+            </form>
           </div>
         </div>
         <div className="row">

@@ -1,90 +1,34 @@
 import React, { useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
 
 function CustomForm({ status, message, onValidated }) {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [msg, setMsg] = useState("");
 
   const resetForm = () => {
-    setName("");
     setEmail("");
-    setSubject("");
-    setMsg("");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    name &&
-      email &&
-      subject &&
-      msg &&
-      email.indexOf("@") > -1 &&
-      onValidated({ NAME: name, EMAIL: email, SUBJECT: subject, MESSAGE: msg });
+    email && email.indexOf("@") > -1 && onValidated({ EMAIL: email });
     resetForm();
   };
+
   return (
     <>
-      <form className="contact-form mt-12" onSubmit={handleSubmit}>
-        <div className="mb-6">
-          <label className="mb-2 block font-secondary" htmlFor="name">
-            Full name
-            <small className="font-secondary text-sm text-primary">*</small>
-          </label>
+      <form action="#" className="py-6" onSubmit={handleSubmit}>
+        <fieldset className="relative">
           <input
-            className="form-input w-full"
-            name="name"
+            className="newsletter-input form-input h-12 w-full rounded-3xl border-none bg-theme-light px-5 py-3 pr-12 text-dark placeholder:text-xs dark:bg-darkmode-theme-dark"
             type="text"
-            placeholder="Thomas Milano"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label className="mb-2 block font-secondary" htmlFor="email">
-            Email Address
-            <small className="font-secondary text-sm text-primary">*</small>
-          </label>
-          <input
-            className="form-input w-full"
-            name="email"
-            type="email"
-            placeholder="example@gmail.com"
+            placeholder="Type And Hit Enter"
             onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            required
           />
-        </div>
-        <div className="mb-6">
-          <label className="mb-2 block font-secondary" htmlFor="subject">
-            Subject
-            <small className="font-secondary text-sm text-primary">*</small>
-          </label>
-          <input
-            className="form-input w-full"
-            name="subject"
-            type="text"
-            placeholder="Blog advertisement"
-            onChange={(e) => setSubject(e.target.value)}
-            value={subject}
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label className="mb-2 block font-secondary" htmlFor="message">
-            Your Message Here
-            <small className="font-secondary text-sm text-primary">*</small>
-          </label>
-          <textarea
-            className="form-textarea w-full"
-            placeholder="Hello I’m Mr ‘x’ from………….."
-            rows="7"
-            onChange={(e) => setMsg(e.target.value)}
-            value={msg}
-          />
-        </div>
-        <input className="btn btn-primary" type="submit" value="Send Now" />
+          <FaEnvelope className="absolute top-1/2 right-5 -translate-y-1/2 text-xl transition duration-75" />
+        </fieldset>
+        <button className="d-block  btn btn-primary mt-4 w-full" type="submit">
+          Sign In
+        </button>
       </form>
       {status === "sending" && (
         <div className="mt-4 text-primary">sending...</div>

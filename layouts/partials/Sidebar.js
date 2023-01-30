@@ -1,5 +1,6 @@
 import config from "@config/config.json";
 import social from "@config/social.json";
+import CustomForm from "@layouts/components/ContactForm";
 import ImageFallback from "@layouts/components/ImageFallback";
 import Logo from "@layouts/components/Logo";
 import Social from "@layouts/components/Social";
@@ -8,7 +9,8 @@ import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import { useState } from "react";
-import { FaEnvelope, FaRegCalendar } from "react-icons/fa";
+import { FaRegCalendar } from "react-icons/fa";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 const { blog_folder } = config.settings;
 const { about, featured_posts, newsletter } = config.widgets;
 
@@ -184,22 +186,16 @@ const Sidebar = ({ posts, categories, className }) => {
         <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
           <h4 className="section-title">{newsletter.title}</h4>
           <p className="mt-10 text-xs">{newsletter.content}</p>
-          <form action="#" className="py-6">
-            <fieldset className="relative">
-              <input
-                className="newsletter-input form-input h-12 w-full rounded-3xl border-none bg-theme-light px-5 py-3 pr-12 text-dark placeholder:text-xs dark:bg-darkmode-theme-dark"
-                type="text"
-                placeholder="Type And Hit Enter"
+          <MailchimpSubscribe
+            url={newsletter.malichip_url}
+            render={({ subscribe, status, message }) => (
+              <CustomForm
+                onValidated={(formData) => subscribe(formData)}
+                status={status}
+                message={message}
               />
-              <FaEnvelope className="absolute top-1/2 right-5 -translate-y-1/2 text-xl transition duration-75" />
-            </fieldset>
-            <button
-              className="d-block  btn btn-primary mt-4 w-full"
-              type="submit"
-            >
-              Sign In
-            </button>
-          </form>
+            )}
+          />
           <p className="text-xs">
             By Singing Up, You Agree To
             <Link
