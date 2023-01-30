@@ -2,9 +2,8 @@ body.menu-open {
   @apply overflow-hidden pr-0;
 }
 
-
 .header {
-  @apply top-0 z-50 bg-body dark:bg-darkmode-body py-[33px] border-b dark:border-darkmode-border;
+  @apply top-0 z-50 border-b bg-body py-[33px] dark:border-darkmode-border dark:bg-darkmode-body;
 }
 
 // navbar items
@@ -13,7 +12,7 @@ body.menu-open {
 }
 
 .collapse-menu {
-  @apply fixed lg:static bg-body lg:bg-transparent dark:bg-darkmode-body items-center lg:space-x-4 xl:space-x-8 lg:flex max-w-[400px] lg:max-w-full  right-0 h-[100vh] lg:h-auto top-0 w-full lg:w-auto z-10 border-l border-l-dark lg:border-l-0 p-6 lg:p-0 mx-0 transition-transform duration-300 ease-in-out; 
+  @apply fixed right-0 top-0 z-10 mx-0 h-[100vh] w-full max-w-[400px] items-center border-l border-l-dark  bg-body p-6 transition-transform duration-300 ease-in-out dark:bg-darkmode-body lg:static lg:flex lg:h-auto lg:w-auto lg:max-w-full lg:space-x-4 lg:border-l-0 lg:bg-transparent lg:p-0 xl:space-x-8;
 }
 
 .navbar-brand {
@@ -28,16 +27,15 @@ body.menu-open {
 }
 
 .nav-item {
-  @apply mb-5 lg:mb-0 text-left;
+  @apply mb-5 text-left lg:mb-0;
 
   &.active {
     @apply bg-primary text-white;
   }
 }
 
-
 .nav-link {
-  @apply px-6 py-2.5 text-[13.5px] capitalize font-secondary text-dark dark:text-darkmode-light  transition hover:text-white md:px-3 xl:px-5 md:py-3 hover:bg-primary rounded-[30px] text-left lg:text-center;
+  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize  text-dark transition hover:bg-primary hover:text-white dark:text-darkmode-light md:px-3 md:py-3 lg:text-center xl:px-5;
 
   &.active {
     @apply bg-primary text-white;
@@ -49,7 +47,7 @@ body.menu-open {
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg  p-4 shadow bg-body dark:bg-black border border-transparent dark:border-darkmode-border;
+  @apply z-10 rounded-lg  border border-transparent bg-body p-4 shadow dark:border-darkmode-border dark:bg-black;
 }
 
 .nav-dropdown-item {
@@ -57,19 +55,19 @@ body.menu-open {
 }
 
 .nav-dropdown-link {
-  @apply min-w-[150px] py-2.5 px-3.5 rounded text-base font-semibold  transition hover:text-primary hover:bg-primary/10 text-dark dark:text-darkmode-light;
+  @apply min-w-[150px] rounded py-2.5 px-3.5 text-base font-semibold  text-dark transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-light;
 
   &.active {
-    @apply text-primary bg-primary/10
+    @apply bg-primary/10 text-primary;
   }
 }
 
 // search style
 .search-icon {
-  @apply inline-block cursor-pointer p-2.5 w-10 h-10 text-xl text-white bg-primary rounded-full;
+  @apply inline-block h-10 w-10 cursor-pointer rounded-full bg-primary p-2.5 text-xl text-white;
 }
 .search-modal {
-  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body dark:bg-black opacity-0 transition md:h-full;
+  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body opacity-0 transition dark:bg-black md:h-full;
   .form-input {
     @apply h-full w-full border-0 px-4 text-lg;
   }

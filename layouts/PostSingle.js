@@ -1,3 +1,4 @@
+import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import dateFormat from "@lib/utils/dateFormat";
 import { markdownify } from "@lib/utils/textConverter";
@@ -5,11 +6,10 @@ import { DiscussionEmbed } from "disqus-react";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Link from "next/link";
+import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
 import shortcodes from "./shortcodes/all";
-import config from "@config/config.json";
-import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 const { disqus } = config;
 const { author_name } = config.settings;
 

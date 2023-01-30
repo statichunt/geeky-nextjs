@@ -30,7 +30,7 @@
 // form style
 .form-input,
 .form-textarea {
-  @apply border-0 px-0 placeholder:text-light placeholder:text-xs dark:placeholder:text-darkmode-light bg-transparent border-b  border-border dark:border-darkmode-border focus:border-primary focus:ring-transparent dark:text-darkmode-light;
+  @apply border-0 border-b border-border bg-transparent px-0 placeholder:text-xs placeholder:text-light  focus:border-primary focus:ring-transparent dark:border-darkmode-border dark:text-darkmode-light dark:placeholder:text-darkmode-light;
 }
 
 // content style
@@ -42,7 +42,7 @@
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
   @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-light;
-  @apply prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:lg:px-16 prose-blockquote:rounded prose-blockquote:dark:bg-theme-dark prose-blockquote:not-italic prose-blockquote:mb-12;
+  @apply prose-blockquote:mb-12 prose-blockquote:rounded prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:not-italic prose-blockquote:dark:bg-theme-dark prose-blockquote:lg:px-16;
   @apply prose-code:px-1 prose-code:text-primary;
   @apply prose-pre:rounded;
   @apply prose-img:rounded;
@@ -57,19 +57,20 @@
   @apply prose-li:marker:dark:text-darkmode-light;
 
   img + em {
-    @apply block text-center text-gray-500 -mt-4;
+    @apply -mt-4 block text-center text-gray-500;
   }
   blockquote {
-    &> p {
-      @apply text-2xl text-black relative;
-      &::after, &::before {
-        @apply content-[''] bg-[url('/images/quote.svg')] w-5 lg:w-8 h-5 lg:h-8 inline-block bg-[length:20px_20px] lg:bg-[length:32px_32px] bg-no-repeat absolute;
-      }
-  
+    & > p {
+      @apply relative text-2xl text-black;
+      &::after,
       &::before {
-        @apply -left-10 lg:-left-10 top-0;
+        @apply absolute inline-block h-5 w-5 bg-[url('/images/quote.svg')] bg-[length:20px_20px] bg-no-repeat content-[''] lg:h-8 lg:w-8 lg:bg-[length:32px_32px];
       }
-  
+
+      &::before {
+        @apply -left-10 top-0 lg:-left-10;
+      }
+
       &::after {
         @apply bottom-0 right-0 rotate-180;
       }
@@ -77,37 +78,36 @@
   }
 }
 
-
 //banner
 .banner {
   &-title {
     h1 {
-      @apply font-bold lg:text-[72px] leading-[1];
+      @apply font-bold leading-[1] lg:text-[72px];
     }
-  
+
     strong {
       @apply text-primary;
     }
-  
+
     span {
-      @apply font-normal lg:text-[55px] font-bold text-dark dark:text-darkmode-light;
+      @apply font-normal font-bold text-dark dark:text-darkmode-light lg:text-[55px];
     }
   }
 }
 
 //section-title
 .section-title {
-  @apply decoration-primary decoration-wavy underline underline-offset-[10px] decoration-2	;
+  @apply underline decoration-primary decoration-wavy decoration-2 underline-offset-[10px];
 }
 
 //socials
 .socials {
-  @apply flex space-x-3 2xl:space-x-4 px-4  mx-3 lg:border-x items-center lg:justify-start justify-center;
+  @apply mx-3 flex items-center justify-center  space-x-3 px-4 lg:justify-start lg:border-x 2xl:space-x-4;
   li {
     @apply inline-flex;
   }
   a {
-    @apply inline-block hover:text-primary dark:hover:text-primary text-dark dark:text-darkmode-light  px-2 py-1 text-lg;
+    @apply inline-block px-2 py-1 text-lg text-dark  hover:text-primary dark:text-darkmode-light dark:hover:text-primary;
   }
 }
 
@@ -115,8 +115,9 @@
   opacity: 0;
 }
 
-.sidebar-socials , footer .socials {
-  @apply border-primary
+.sidebar-socials,
+footer .socials {
+  @apply border-primary;
 }
 
 //experience
@@ -125,7 +126,7 @@
     @apply relative pl-7;
 
     &::before {
-      @apply content-[''] absolute left-1 w-[9px] h-[9px] rounded-full bg-primary top-2.5 shadow-[0px_0px_0px_2px] shadow-primary border-2 border-white;
+      @apply absolute left-1 top-2.5 h-[9px] w-[9px] rounded-full border-2 border-white bg-primary shadow-[0px_0px_0px_2px] shadow-primary content-[''];
     }
   }
 }
@@ -177,7 +178,6 @@
   }
 }
 
-
 .active-tab {
   @apply bg-theme-light dark:bg-darkmode-theme-dark;
 }
@@ -193,19 +193,19 @@
   blockquote {
     @apply px-12 lg:px-[105px];
 
-    &> p {
+    & > p {
       @apply lg:text-[24px];
-      @apply text-2xl text-black relative ;
-      &::after, &::before {
-        @apply content-[''] bg-[url('/images/quote.svg')] w-8 h-8 inline-block bg-[length:32px_32px] bg-no-repeat absolute;
+      @apply relative text-2xl text-black;
+      &::after,
+      &::before {
+        @apply absolute inline-block h-8 w-8 bg-[url('/images/quote.svg')] bg-[length:32px_32px] bg-no-repeat content-[''];
       }
-  
+
       &::before {
         @apply left-0 top-0;
         @apply -left-10 lg:-left-12;
-
       }
-  
+
       &::after {
         @apply bottom-0 right-0 rotate-180;
         @apply -right-10 lg:-right-8;
@@ -213,6 +213,6 @@
     }
   }
 }
-#disqus_thread  {
-  @apply p-6 bg-body ;
+#disqus_thread {
+  @apply bg-body p-6;
 }
