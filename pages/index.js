@@ -9,11 +9,9 @@ import { getTaxonomy } from "@lib/taxonomyParser";
 import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
-import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { FaRegCalendar } from "react-icons/fa";
-const { blog_folder, author_name, pagination } = config.settings;
+const { blog_folder, pagination } = config.settings;
 
 const Home = ({
   banner,
@@ -30,22 +28,13 @@ const Home = ({
   );
   const showPosts = pagination;
 
-  const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
   return (
     <Base>
       {/* Banner */}
       <section className="section banner relative pb-0">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
-          src={
-            mounted && (theme === "dark" || resolvedTheme === "dark")
-              ? "/images/banner-bg-shape-dark.svg"
-              : "/images/banner-bg-shape.svg"
-          }
+          src={"/images/banner-bg-shape.svg"}
           width={1905}
           height={295}
           alt="banner-shape"
@@ -57,7 +46,7 @@ const Home = ({
             <div className="mt-12 text-center lg:mt-0 lg:text-left lg:col-6">
               <div className="banner-title">
                 {markdownify(banner.title, "h1")}
-                <span>to {author_name} Blog</span>
+                {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
               <Link
@@ -83,55 +72,56 @@ const Home = ({
       </section>
 
       {/* Home main */}
-      <section className="section mt-16 ">
+      <section className="section">
         <div className="container">
-          {featured_posts.enable &&
-            markdownify(featured_posts.title, "h2", "h2 section-title")}
-          <div className="row mt-11 items-start">
-            <div className="lg:col-8">
+          <div className="row items-start">
+            <div className="mb-12 lg:mb-0 lg:col-8">
               {/* Featured posts */}
               {featured_posts.enable && (
-                <div className="rounded border border-border p-6 dark:border-darkmode-border">
-                  <div className="row">
-                    <div className="lg:col-6">
-                      <Post post={featuredPosts[0]} />
-                    </div>
-                    <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border dark:scrollbar-track-gray-800 dark:scrollbar-thumb-darkmode-theme-dark lg:mt-0 lg:col-6">
-                      {featuredPosts
-                        .slice(1, featuredPosts.length)
-                        .map((post, i, arr) => (
-                          <div
-                            className={`mb-6 flex items-center pb-6 ${
-                              i !== arr.length - 1 &&
-                              "border-b border-border dark:border-darkmode-border"
-                            }`}
-                            key={`key-${i}`}
-                          >
-                            {post.frontmatter.image && (
-                              <ImageFallback
-                                className="mr-3 h-[85px] rounded object-cover"
-                                src={post.frontmatter.image}
-                                alt={post.frontmatter.title}
-                                width={105}
-                                height={85}
-                              />
-                            )}
-                            <div>
-                              <h3 className="h5 mb-2">
-                                <Link
-                                  href={`/${blog_folder}/${post.slug}`}
-                                  className="block hover:text-primary"
-                                >
-                                  {post.frontmatter.title}
-                                </Link>
-                              </h3>
-                              <p className="inline-flex items-center font-bold">
-                                <FaRegCalendar className="mr-1.5" />
-                                {dateFormat(post.frontmatter.date)}
-                              </p>
+                <div className="section">
+                  {markdownify(featured_posts.title, "h2", "section-title")}
+                  <div className="rounded border border-border p-6 dark:border-darkmode-border">
+                    <div className="row">
+                      <div className="md:col-6">
+                        <Post post={featuredPosts[0]} />
+                      </div>
+                      <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border dark:scrollbar-track-gray-800 dark:scrollbar-thumb-darkmode-theme-dark md:mt-0 md:col-6">
+                        {featuredPosts
+                          .slice(1, featuredPosts.length)
+                          .map((post, i, arr) => (
+                            <div
+                              className={`mb-6 flex items-center pb-6 ${
+                                i !== arr.length - 1 &&
+                                "border-b border-border dark:border-darkmode-border"
+                              }`}
+                              key={`key-${i}`}
+                            >
+                              {post.frontmatter.image && (
+                                <ImageFallback
+                                  className="mr-3 h-[85px] rounded object-cover"
+                                  src={post.frontmatter.image}
+                                  alt={post.frontmatter.title}
+                                  width={105}
+                                  height={85}
+                                />
+                              )}
+                              <div>
+                                <h3 className="h5 mb-2">
+                                  <Link
+                                    href={`/${blog_folder}/${post.slug}`}
+                                    className="block hover:text-primary"
+                                  >
+                                    {post.frontmatter.title}
+                                  </Link>
+                                </h3>
+                                <p className="inline-flex items-center font-bold">
+                                  <FaRegCalendar className="mr-1.5" />
+                                  {dateFormat(post.frontmatter.date)}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -139,32 +129,31 @@ const Home = ({
 
               {/* Promotion */}
               {promotion.enable && (
-                <Link
-                  href={promotion.link}
-                  className="relative mt-11 mb-11 block h-[122px]"
-                >
-                  <ImageFallback fill src={promotion.image} alt="promotion" />
+                <Link href={promotion.link} className="section block pt-0">
+                  <ImageFallback
+                    className="h-full w-full"
+                    height="115"
+                    width="800"
+                    src={promotion.image}
+                    alt="promotion"
+                  />
                 </Link>
               )}
 
               {/* Recent Posts */}
               {recent_posts.enable && (
-                <>
-                  {markdownify(
-                    recent_posts.title,
-                    "h2",
-                    "h2 section-title mt-16"
-                  )}
-                  <div className="mb-16 mt-12 rounded border border-border p-6 dark:border-darkmode-border">
-                    <div className="row -mt-16">
+                <div className="section pt-0">
+                  {markdownify(recent_posts.title, "h2", "section-title")}
+                  <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
+                    <div className="row">
                       {sortPostByDate.slice(0, showPosts).map((post) => (
-                        <div className="mt-16 lg:col-6" key={post.slug}>
+                        <div className="mb-8 md:col-6" key={post.slug}>
                           <Post post={post} />
                         </div>
                       ))}
                     </div>
                   </div>
-                </>
+                </div>
               )}
 
               <Pagination
@@ -173,7 +162,11 @@ const Home = ({
               />
             </div>
             {/* sidebar */}
-            <Sidebar posts={posts} categories={categories} />
+            <Sidebar
+              className={"lg:mt-[9.5rem]"}
+              posts={posts}
+              categories={categories}
+            />
           </div>
         </div>
       </section>

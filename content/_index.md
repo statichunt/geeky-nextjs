@@ -1,16 +1,17 @@
 ---
 banner:
-  title: Welcome <strong>!</strong>
+  title: Welcome **!**
+  title_small: "to John Bravo's Blog"
   content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
-  image: /images/banner.png
+  image: /images/banner-author.png
   button:
     label: Know About Me
     link: /about
     rel: ""
 
 featured_posts:
-  title: Featured Post
   enable: true
+  title: Featured Posts
 
 promotion:
   enable: true
@@ -18,7 +19,7 @@ promotion:
   link: "#"
 
 recent_posts:
-  title: Featured Post
+  title: Recent Posts
   enable: true
 
 ---

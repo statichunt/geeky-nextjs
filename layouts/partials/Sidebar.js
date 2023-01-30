@@ -1,17 +1,18 @@
 import config from "@config/config.json";
 import social from "@config/social.json";
 import ImageFallback from "@layouts/components/ImageFallback";
+import Logo from "@layouts/components/Logo";
 import Social from "@layouts/components/Social";
 import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
-import { FaRegCalendar, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
+import { FaEnvelope, FaRegCalendar } from "react-icons/fa";
 const { blog_folder } = config.settings;
-const { about, featured_posts, newsletter, categories } = config.widgets;
+const { about, featured_posts, newsletter } = config.widgets;
 
-const Sidebar = ({ posts, categories }) => {
+const Sidebar = ({ posts, categories, className }) => {
   const sortPostByDate = sortByDate(posts);
   const featuredPosts = sortPostByDate.filter(
     (post) => post.frontmatter.featured
@@ -20,22 +21,16 @@ const Sidebar = ({ posts, categories }) => {
   const [showRecent, setShowRecent] = useState(true);
 
   return (
-    <aside className="mt-12 px-0 lg:mt-0 lg:px-6 lg:col-4">
+    <aside className={`${className} px-0 lg:px-6 lg:col-4`}>
       {about.enable && (
-        <div className="relative rounded border border-border p-6 dark:border-darkmode-border">
+        <div className="relative rounded border border-border p-6 text-center dark:border-darkmode-border">
           <ImageFallback
-            className="-z-[1] dark:invisible"
-            src="/images/map.png"
+            className="-z-[1]"
+            src="/images/map.svg"
             fill={true}
-            alt=""
+            alt="bg-map"
           />
-          <ImageFallback
-            className="mx-auto"
-            src={about.logo}
-            width={150}
-            height={39}
-            alt="logo"
-          />
+          <Logo />
           {markdownify(about.content, "p", "mt-8")}
           <Social
             className="socials sidebar-socials mt-6 justify-center"

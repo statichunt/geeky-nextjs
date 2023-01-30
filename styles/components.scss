@@ -97,7 +97,7 @@
 
 //section-title
 .section-title {
-  @apply underline decoration-primary decoration-wavy decoration-2 underline-offset-[10px];
+  @apply mb-12 underline decoration-primary decoration-wavy decoration-2 underline-offset-[.5em];
 }
 
 //socials
@@ -213,6 +213,6 @@ footer .socials {
     }
   }
 }
-#disqus_thread {
-  @apply bg-body p-6;
+.embed-refresh body {
+  background-color: black !important;
 }

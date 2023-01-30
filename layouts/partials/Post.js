@@ -2,10 +2,11 @@ import config from "@config/config.json";
 import ImageFallback from "@layouts/components/ImageFallback";
 import dateFormat from "@lib/utils/dateFormat";
 import Link from "next/link";
-import { FaUserAlt, FaRegCalendar } from "react-icons/fa";
+import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 
 const Post = ({ post }) => {
-  const { summary_length, blog_folder, author_name } = config.settings;
+  const { summary_length, blog_folder } = config.settings;
+  const { meta_author } = config.metadata;
   return (
     <div className="post">
       <div className="relative">
@@ -49,7 +50,7 @@ const Post = ({ post }) => {
             href="/about"
           >
             <FaUserAlt className="mr-1.5" />
-            {author_name}
+            {meta_author}
           </Link>
         </li>
         <li className="inline-flex items-center font-secondary text-xs leading-3">

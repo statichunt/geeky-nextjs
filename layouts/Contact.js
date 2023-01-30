@@ -1,14 +1,14 @@
 import { markdownify } from "@lib/utils/textConverter";
-import ImageFallback from "./components/ImageFallback";
-import { FaUserAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
-
 import { BsArrowRightShort } from "react-icons/bs";
-import CustomForm from "./components/contact-form";
+import { FaEnvelope, FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import CustomForm from "./components/ContactForm";
+import ImageFallback from "./components/ImageFallback";
+
 const Contact = ({ data }) => {
   const { frontmatter } = data;
-  const { title, bg_img, addresses } = frontmatter;
+  const { title, addresses } = frontmatter;
   const addressList = addresses.map((address) => {
     const icon =
       address.icon === "FaUserAlt"
@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
         <div className="row relative pb-16">
           <ImageFallback
             className="-z-[1] object-cover object-top dark:invisible"
-            src={bg_img}
+            src={"/images/map.svg"}
             fill="true"
             alt=""
             priority={true}
@@ -40,7 +40,7 @@ const Contact = ({ data }) => {
               "h1 my-10 lg:my-11 lg:pt-11 text-center lg:text-left lg:text-[64px]"
             )}
           </div>
-          <div className="rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
+          <div className="contact-form-wrapper rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
             <h2>
               Send Us A
               <span className="ml-1.5 inline-flex items-center text-primary">

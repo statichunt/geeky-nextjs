@@ -11,7 +11,7 @@ import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
 import shortcodes from "./shortcodes/all";
 const { disqus } = config;
-const { author_name } = config.settings;
+const { meta_author } = config.metadata;
 
 const PostSingle = ({
   frontmatter,
@@ -66,7 +66,7 @@ const PostSingle = ({
                       href="/about"
                     >
                       <FaUserAlt className="mr-1.5" />
-                      {author_name}
+                      {meta_author}
                     </Link>
                   </li>
                   <li className="inline-flex items-center font-secondary text-xs leading-3">
@@ -78,6 +78,14 @@ const PostSingle = ({
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
               </article>
+              <div className="mt-16">
+                {disqus.enable && (
+                  <DiscussionEmbed
+                    shortname={disqus.shortname}
+                    config={config.disqus.settings}
+                  />
+                )}
+              </div>
             </div>
             <Sidebar
               posts={posts.filter((post) => post.slug !== slug)}
@@ -86,18 +94,9 @@ const PostSingle = ({
           </div>
         </div>
 
-        <div className="container">
-          {disqus.enable && (
-            <DiscussionEmbed
-              shortname={disqus.shortname}
-              config={config.disqus.settings}
-            />
-          )}
-        </div>
-
         {/* Related posts */}
         <div className="container mt-20">
-          <h2 className="h2 section-title">Related Posts</h2>
+          <h2 className="section-title">Related Posts</h2>
           <div className="row mt-16">
             {relatedPosts.slice(0, 3).map((post, index) => (
               <div key={"post-" + index} className="mb-12 lg:col-4">

@@ -14,8 +14,7 @@
     "default_theme": "system",
     "pagination": 6,
     "summary_length": 200,
-    "blog_folder": "posts",
-    "author_name": "Jhon Bravo"
+    "blog_folder": "posts"
   },
   "params": {
     "tag_manager_id": "",
