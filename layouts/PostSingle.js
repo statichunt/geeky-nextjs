@@ -4,6 +4,7 @@ import dateFormat from "@lib/utils/dateFormat";
 import { markdownify } from "@lib/utils/textConverter";
 import { DiscussionEmbed } from "disqus-react";
 import { MDXRemote } from "next-mdx-remote";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
@@ -24,6 +25,8 @@ const PostSingle = ({
 }) => {
   let { description, title, date, image, categories } = frontmatter;
   description = description ? description : content.slice(0, 120);
+
+  const { theme } = useTheme();
 
   return (
     <Base title={title} description={description}>
@@ -81,6 +84,7 @@ const PostSingle = ({
               <div className="mt-16">
                 {disqus.enable && (
                   <DiscussionEmbed
+                    key={theme}
                     shortname={disqus.shortname}
                     config={config.disqus.settings}
                   />

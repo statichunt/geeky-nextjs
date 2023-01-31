@@ -1,7 +1,8 @@
 ---
-layout: about
-image: /images/author.png
 title: About The Author
+image: /images/author.png
+description: "meta description"
+layout: about
 education:
   title: Formal Education
   degrees:

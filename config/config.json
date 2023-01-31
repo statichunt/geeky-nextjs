@@ -29,7 +29,6 @@
   "widgets": {
     "about": {
       "enable": true,
-      "logo": "/images/logo.png",
       "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
     },
     "featured_posts": {

@@ -1,22 +1,13 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
-import ImageFallback from "@layouts/components/ImageFallback";
 import Pagination from "@layouts/components/Pagination";
 import { getListPage, getSinglePage } from "@lib/contentParser";
-import dateFormat from "@lib/utils/dateFormat";
 import { markdownify } from "@lib/utils/textConverter";
 import Post from "@partials/Post";
-import Link from "next/link";
 const { blog_folder, summary_length } = config.settings;
 
 // blog pagination
-const BlogPagination = ({
-  postIndex,
-  posts,
-  authors,
-  currentPage,
-  pagination,
-}) => {
+const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
@@ -72,14 +63,12 @@ export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const posts = getSinglePage(`content/${blog_folder}`);
-  const authors = getSinglePage("content/authors");
   const postIndex = await getListPage(`content/${blog_folder}/_index.md`);
 
   return {
     props: {
       pagination: pagination,
       posts: posts,
-      authors: authors,
       currentPage: currentPage,
       postIndex: postIndex,
     },
