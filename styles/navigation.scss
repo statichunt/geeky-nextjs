@@ -79,9 +79,9 @@ body.menu-open {
   }
 }
 
-
 .light .menu-open {
-  .border-border, &.border-border {
+  .border-border,
+  &.border-border {
     @apply border-darkmode-border;
   }
 }

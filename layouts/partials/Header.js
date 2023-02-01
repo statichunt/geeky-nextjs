@@ -31,13 +31,13 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="navbar container">
+      <nav className="navbar container px-1 sm:px-8">
         <div className="order-0">
           <Logo />
         </div>
         <div className="flex items-center space-x-4 xl:space-x-8">
           <div
-            className={`collapse-menu  ${
+            className={`collapse-menu ${
               !showMenu && "translate-x-full"
             } lg:flex lg:translate-x-0`}
           >
