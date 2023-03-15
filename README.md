@@ -1,5 +1,14 @@
 <h1 align=center>Using Geeky Nextjs for making a blog about self-taught web development</h1>
-<p align=center>Geeky is a free NextJs personal blog template</p>
+<p align=center>Hi i want to share my git repo here! It is my very first
+web development project based on Nextjs.
+The project is a blog about self-taught web
+development.
+I will sharing my pratice, the last tech features and
+many other thing!
+I think the better way to learn is teaching how work the
+thing!
+If anybody would help me or collaborate dont be shy
+and share me your knowledge!  Blog on nextjs</p>
 <h2 align="center"> <a target="_blank" href="https://geeky-nextjs.vercel.app/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fgeeky-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)</a>
 </h2>
 
