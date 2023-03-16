@@ -26,7 +26,7 @@ and share me your knowledge!  Blog on nextjs</p>
     <img src="https://img.shields.io/github/contributors/statichunt/geeky-nextjs" alt="contributors"></a>
 </p>
 
-![geeky](https://statichunt.com/themes/nextjs-geeky.png)
+
 
 ## Key Features
 
