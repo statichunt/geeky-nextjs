@@ -4,8 +4,7 @@ image: /images/author.png
 description: "meta description"
 layout: about
 education:
-  title: Education
-  Self-taught web developer.
+  title: Education, Self-taught web developer.
 
 experience:
   title:  Interest
