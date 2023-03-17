@@ -1,33 +1,22 @@
 ---
-title: About The Author
+title: About me
 image: /images/author.png
 description: "meta description"
 layout: about
 education:
-  title: Formal Education
-  degrees:
-    - university: "Southeast University"
-      content: "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-    - university: "Northeast University"
-      content: "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-    - university: "Easteast University"
-      content: "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-    - university: "Southeast University"
-      content: "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"  
+  title: Education
+  Self-taught web developer.
 
 experience:
-  title: Work Experience
+  title:  Interest
   list:
-    - Best Writer Award
-    - Best New Newel
-    - Best Book
-    - Best Article
-    - Best New Newel
-    - Best New Newel
-    - Best Book
-    - Best Article
-    - Best New Newel
-    - Best Book
+    - Web development of course ( Front-end and some back-end ). 
+    - SEO pratice.
+    - Accessibility learning.
+    - Bug bounty fascinate me.
+    - I'm a rookie but i love capture the flag.
+    - Listenning all the podcast about web development and cybersecurity.
+    -  Many other things coming...
 
 ---
 
