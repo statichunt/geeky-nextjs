@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Geeky Nextjs",
+    "title": "DEV4LEARN",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
@@ -22,9 +22,9 @@
     "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
   },
   "metadata": {
-    "meta_author": "Statichunt",
+    "meta_author": "DEV4LEARN",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Geeky Nextjs Personal Blog Template"
+    "meta_description": DEV4LEARN Nextjs Personal Blog"
   },
   "widgets": {
     "about": {
