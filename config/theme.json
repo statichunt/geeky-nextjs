@@ -10,7 +10,7 @@
       },
       "text_color": {
         "default": "#555",
-        "dark": "#922",
+        "dark": "#222",
         "light": "#999"
       }
     },
