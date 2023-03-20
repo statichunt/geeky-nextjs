@@ -1,6 +1,6 @@
 import Logo from "@components/Logo";
 import menu from "@config/menu.json";
-import socical from "@config/social.json";
+import social from "@config/social.json";
 import Social from "@layouts/components/Social";
 import ThemeSwitcher from "@layouts/components/ThemeSwitcher";
 import SearchModal from "@partials/SearchModal";
