@@ -7,6 +7,7 @@ import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 const Post = ({ post }) => {
   const { summary_length, blog_folder } = config.settings;
   const { meta_author } = config.metadata;
+  const author = post.frontmatter.author ? post.frontmatter.author : meta_author;
   return (
     <div className="post">
       <div className="relative">
@@ -50,7 +51,7 @@ const Post = ({ post }) => {
             href="/about"
           >
             <FaUserAlt className="mr-1.5" />
-            {meta_author}
+            {author}
           </Link>
         </li>
         <li className="inline-flex items-center font-secondary text-xs leading-3">
