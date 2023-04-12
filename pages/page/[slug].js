@@ -10,7 +10,8 @@ const { blog_folder, summary_length } = config.settings;
 const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const orderedPosts = posts.sort((lhs, rhs) => rhs.frontmatter.date.localeCompare(lhs.frontmatter.date));
+  const currentPosts = orderedPosts.slice(indexOfFirstPost, indexOfLastPost);
   const { frontmatter } = postIndex;
   const { title } = frontmatter;
   const totalPages = Math.ceil(posts.length / pagination);
