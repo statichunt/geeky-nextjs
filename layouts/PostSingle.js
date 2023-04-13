@@ -27,6 +27,7 @@ const PostSingle = ({
   description = description ? description : content.slice(0, 120);
 
   const { theme } = useTheme();
+  const author = frontmatter.author ? frontmatter.author : meta_author;
 
   return (
     <Base title={title} description={description}>
@@ -69,7 +70,7 @@ const PostSingle = ({
                       href="/about"
                     >
                       <FaUserAlt className="mr-1.5" />
-                      {meta_author}
+                      {author}
                     </Link>
                   </li>
                   <li className="inline-flex items-center font-secondary text-xs leading-3">
