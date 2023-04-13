@@ -43,30 +43,34 @@ const Home = ({
 
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
-            <div className="mt-12 text-center lg:mt-0 lg:text-left lg:col-6">
+            <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
               <div className="banner-title">
                 {markdownify(banner.title, "h1")}
                 {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
-              <Link
-                className="btn btn-primary mt-6"
-                href={banner.button.link}
-                rel={banner.button.rel}
-              >
-                {banner.button.label}
-              </Link>
+              {banner.button.enable && (
+                  <Link
+                    className="btn btn-primary mt-6"
+                    href={banner.button.link}
+                    rel={banner.button.rel}
+                  >
+                    {banner.button.label}
+                  </Link>
+              )}
             </div>
-            <div className="col-9 lg:col-6">
-              <ImageFallback
-                className="mx-auto object-contain"
-                src={banner.image}
-                width={548}
-                height={443}
-                priority={true}
-                alt="Banner Image"
-              />
-            </div>
+            {banner.image_enable && (
+                <div className="col-9 lg:col-6">
+                  <ImageFallback
+                    className="mx-auto object-contain"
+                    src={banner.image}
+                    width={548}
+                    height={443}
+                    priority={true}
+                    alt="Banner Image"
+                  />
+                </div>
+            )}
           </div>
         </div>
       </section>
