@@ -1,6 +1,6 @@
 ---
 title: What you need to know about Photography
-date: 2022-04-02T06:00:00+00:00
+date: 2022-04-02T03:00:00+00:00
 image: /images/post/post-3.png
 categories: ["workstation"]
 featured: true
