@@ -7,6 +7,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import PrevNextNav from "@layouts/shortcodes/PrevNextNav";
 import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
@@ -62,7 +63,8 @@ const PostSingle = ({
                     ))}
                   </ul>
                 </div>
-                {markdownify(title, "h1", "lg:text-[42px] mt-16")}
+                <PrevNextNav posts={posts} date={date}/>
+                {markdownify(title, "h1", "lg:text-[42px] mt-4")}
                 <ul className="flex items-center space-x-4">
                   <li>
                     <Link
@@ -81,6 +83,7 @@ const PostSingle = ({
                 <div className="content mb-16">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
+                <PrevNextNav posts={posts} date={date}/>
               </article>
               <div className="mt-16">
                 {disqus.enable && (
