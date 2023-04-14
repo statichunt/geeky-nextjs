@@ -29,6 +29,9 @@ const PostSingle = ({
 
   const { theme } = useTheme();
   const author = frontmatter.author ? frontmatter.author : meta_author;
+  // Local copy so we don't modify global config.
+  let disqusConfig = config.disqus.settings;
+  disqusConfig.identifier = frontmatter.disqusId ? frontmatter.disqusId : config.settings.blog_folder + '/' + slug;
 
   return (
     <Base title={title} description={description}>
@@ -90,7 +93,7 @@ const PostSingle = ({
                   <DiscussionEmbed
                     key={theme}
                     shortname={disqus.shortname}
-                    config={config.disqus.settings}
+                    config={disqusConfig}
                   />
                 )}
               </div>
