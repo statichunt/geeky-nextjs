@@ -29,11 +29,13 @@ import {
   IoLogoWhatsapp,
   IoLogoYoutube,
   IoMail,
+  IoLogoStackoverflow,
 } from "react-icons/io5";
 
 const Social = ({ source, className }) => {
   const {
     facebook,
+    stackoverflow,
     twitter,
     instagram,
     youtube,
@@ -75,6 +77,18 @@ const Social = ({ source, className }) => {
             rel="noopener noreferrer nofollow"
           >
             <IoLogoFacebook />
+          </a>
+        </li>
+      )}
+      {stackoverflow && (
+        <li className="inline-block">
+          <a
+            aria-label="stackoverflow"
+            href={stackoverflow}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <IoLogoStackoverflow />
           </a>
         </li>
       )}
