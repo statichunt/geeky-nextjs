@@ -1,5 +1,6 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
+import InnerPagination from "@layouts/components/InnerPagination";
 import dateFormat from "@lib/utils/dateFormat";
 import { markdownify } from "@lib/utils/textConverter";
 import { DiscussionEmbed } from "disqus-react";
@@ -7,7 +8,6 @@ import { MDXRemote } from "next-mdx-remote";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import PrevNextNav from "@layouts/shortcodes/PrevNextNav";
 import { FaRegCalendar, FaUserAlt } from "react-icons/fa";
 import Post from "./partials/Post";
 import Sidebar from "./partials/Sidebar";
@@ -31,7 +31,9 @@ const PostSingle = ({
   const author = frontmatter.author ? frontmatter.author : meta_author;
   // Local copy so we don't modify global config.
   let disqusConfig = config.disqus.settings;
-  disqusConfig.identifier = frontmatter.disqusId ? frontmatter.disqusId : config.settings.blog_folder + '/' + slug;
+  disqusConfig.identifier = frontmatter.disqusId
+    ? frontmatter.disqusId
+    : config.settings.blog_folder + "/" + slug;
 
   return (
     <Base title={title} description={description}>
@@ -66,7 +68,6 @@ const PostSingle = ({
                     ))}
                   </ul>
                 </div>
-                <PrevNextNav posts={posts} date={date}/>
                 {markdownify(title, "h1", "lg:text-[42px] mt-4")}
                 <ul className="flex items-center space-x-4">
                   <li>
@@ -86,7 +87,7 @@ const PostSingle = ({
                 <div className="content mb-16">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
-                <PrevNextNav posts={posts} date={date}/>
+                <InnerPagination posts={posts} date={date} />
               </article>
               <div className="mt-16">
                 {disqus.enable && (
