@@ -6,6 +6,7 @@ import Link from "next/link";
 const { blog_folder } = config.settings;
 import { getSinglePage } from "@lib/contentParser";
 import { FaFolder } from "react-icons/fa";
+import { slugify } from "@lib/utils/textConverter";
 
 const Categories = ({ categories }) => {
   return (
@@ -46,7 +47,7 @@ export const getStaticProps = () => {
   const categories = getTaxonomy(`content/${blog_folder}`, "categories");
   const categoriesWithPostsCount = categories.map((category) => {
     const filteredPosts = posts.filter((post) =>
-      post.frontmatter.categories.includes(category)
+      post.frontmatter.categories.map(e => slugify(e)).includes(category)
     );
     return {
       name: category,
