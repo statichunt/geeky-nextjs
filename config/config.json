@@ -14,8 +14,8 @@
     "default_theme": "system",
     "pagination": 6,
     "InnerPaginationOptions": {
-        "enableTop": false,
-        "enableBot": true
+      "enableTop": false,
+      "enableBottom": true
     },
     "summary_length": 200,
     "blog_folder": "posts"

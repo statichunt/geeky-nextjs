@@ -69,9 +69,9 @@ const PostSingle = ({
                   </ul>
                 </div>
                 {config.settings.InnerPaginationOptions.enableTop && (
-                <div className="mt-4">
-                <InnerPagination posts={posts} date={date} />
-                </div>
+                  <div className="mt-4">
+                    <InnerPagination posts={posts} date={date} />
+                  </div>
                 )}
                 {markdownify(title, "h1", "lg:text-[42px] mt-4")}
                 <ul className="flex items-center space-x-4">
@@ -92,8 +92,8 @@ const PostSingle = ({
                 <div className="content mb-16">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
-                {config.settings.InnerPaginationOptions.enableBot && (
-                <InnerPagination posts={posts} date={date} />
+                {config.settings.InnerPaginationOptions.enableBottom && (
+                  <InnerPagination posts={posts} date={date} />
                 )}
               </article>
               <div className="mt-16">
