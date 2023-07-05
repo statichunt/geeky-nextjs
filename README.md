@@ -80,4 +80,24 @@ Copyright (c) 2019 - Present, Designed & Developed by [statichunt](https://stati
 
 **Code License:** Released under the [MIT](https://github.com/statichunt/geeky-nextjs/blob/main/LICENSE) license.
 
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
+**Image license:** The images are only for demonstration purposes.
+
+All images are licensed under: ["Unsplash License"](https://unsplash.com/license) and are free to use for Commercial and non-commercial purposes.
+
+* image: /images/post/post-1.png  
+    original:           https://unsplash.com/photos/g29arbbvPjo
+* image: /images/post/post-2.png  
+    original:           https://unsplash.com/photos/uyfohHiTxho
+* image: /images/post/post-3.png  
+    original:           https://unsplash.com/photos/d6dxQwmxV2Q
+* image: /images/post/post-4.png  
+    original:           https://unsplash.com/photos/wX2L8L-fGeA
+* image: /images/post/post-5.png  
+    original:           https://unsplash.com/photos/W-oqNwbmin0
+* image: /images/post/post-6.png  
+    original:           https://unsplash.com/photos/Bj6ENZDMSDY
+* image: /images/post/post-7.png  
+    original:           https://unsplash.com/photos/2EJCSULRwC8
+* image: /images/post/post-8.png  
+    original:           https://unsplash.com/photos/oSvR0wGYUBs
+
