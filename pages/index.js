@@ -34,7 +34,7 @@ const Home = ({
       <section className="section banner relative pb-0">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
-          src={"/images/banner-bg-shape.svg"}
+          src={"/images/banner_bg_cropped.png"}
           width={1905}
           height={295}
           alt="banner-shape"
@@ -160,17 +160,17 @@ const Home = ({
                 </div>
               )}
 
-              <Pagination
+              {/* <Pagination
                 totalPages={Math.ceil(posts.length / showPosts)}
                 currentPage={1}
-              />
+              /> */}
             </div>
-            {/* sidebar */}
+            {/* sidebar 
             <Sidebar
               className={"lg:mt-[9.5rem]"}
               posts={posts}
               categories={categories}
-            />
+            /> */}
           </div>
         </div>
       </section>

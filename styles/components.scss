@@ -83,14 +83,17 @@
   &-title {
     h1 {
       @apply font-bold leading-[1] lg:text-[72px];
+      color: white;
     }
 
     strong {
       @apply text-primary;
+      color: white;
     }
 
     span {
       @apply font-normal font-bold text-dark dark:text-darkmode-light lg:text-[55px];
+      color: white;
     }
   }
 }

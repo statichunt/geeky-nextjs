@@ -1,23 +1,23 @@
 {
   "main": [
     {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "About",
+      "name": "Sobre",
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Programação",
+      "url": "/programacao"
     },
     {
-      "name": "Contact",
+      "name": "Inscrições",
+      "url": "/inscrições"
+    },
+    {
+      "name": "Contato",
       "url": "/contact"
     },
     {
-      "name": "Pages",
+      "name": "Patrocinio",
       "url": "",
       "hasChildren": true,
       "children": [
@@ -34,7 +34,7 @@
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Sobre",
       "url": "/about"
     },
     {
@@ -42,7 +42,7 @@
       "url": "/contact"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Política de Privadidade",
       "url": "#"
     }
   ]

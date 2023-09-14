@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Geeky Nextjs",
+    "title": "II EXPOTEC IFCM",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_white": "/images/logo-light.png",
     "logo_width": "150",
     "logo_height": "39",
-    "logo_text": "Geeky"
+    "logo_text": "EXPOTEC"
   },
   "settings": {
     "theme_switcher": true,
@@ -23,7 +23,7 @@
   "params": {
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
+    "copyright": "Designed and Developed IFRN CM"
   },
   "metadata": {
     "meta_author": "Statichunt",
