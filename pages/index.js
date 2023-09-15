@@ -116,7 +116,7 @@ const Home = ({
               </p>         
               <p><br /></p>
               <p>
-                Clique <Link href="/chamada-de-trabalhos"> aqui </Link> para submeter seu trabalho.
+                Clique <Link href="/chamada-de-trabalhos"> <b>aqui</b> </Link> para submeter seu trabalho.
               </p>                            
             </div>
           </div>
