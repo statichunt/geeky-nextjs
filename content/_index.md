@@ -1,7 +1,7 @@
 ---
 banner:
-  title: II EXPOTEC IFCM 
-  title_small: Bem Vindos **!**
+  title: II EXPOTEC IFRN/CM 
+  title_small: 20 – 24 de nov. de 2023
   content: Estamos em um processo de constante atualizaçoes das informações em nosso portal.
   image_enable: false
   image: /images/banner-author.png

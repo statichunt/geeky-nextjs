@@ -40,6 +40,8 @@ const Home = ({
           alt="banner-shape"
           priority
         />
+        
+
 
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
@@ -71,6 +73,32 @@ const Home = ({
                   />
                 </div>
             )}
+          </div>
+        </div>
+      </section>
+
+        {/* Nova seção de texto */}
+        <section className="section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2>Bem vindos!</h2>
+              <p>
+                Sejam muito bem-vindos a segunda edição da Exposição Científica, Tecnológica e Cultural (EXPOTEC) do IFRN, campus Ceará-Mirim. O evento tem como objetivo agregar toda a comunidade do IFRN, campus Ceará-Mirim, e demais interessados em prol do compartilhamento da cultura e produção tecnológica e científica que se realiza na área de abrangência do referido campus. Dessa forma, além de se propor a ser um espaço de construção e compartilhamento de conhecimento, o evento também incentiva o eixo artístico-cultural da região.
+              </p>
+              <p><br /></p>
+              <p>
+                Tendo como tema "Como as contribuições da Ciência podem colaborar com a construção de uma sociedade mais justa, inclusiva, sustentável e igualitária”, a II EXPOTEC convida toda a comunidade a refletir acerca das diferentes formas como a Ciência pode contribuir para que tenhamos uma sociedade em que a Justiça seja cada vez mais fortalecida e valorizada; em que todos os sujeitos tenham condições de exercer sua cidadania e gozar plenamente de seus direitos (independente de renda, raça, etnia, origem, gênero, orientação sexual, condição neurológica ou física); e que possamos viver em harmonia com o meio ambiente visando a preservação da vida na terra e promovendo uma relação saudável entre humanidade e natureza.
+              </p>
+              <p><br /></p>
+              <p>
+                Pensando sobre tais questões que desafiam a contemporaneidade, a II EXPOTEC se abre para receber trabalhos que discutam, criem entendimento ou apresentem proposições dentro do tema do evento, sob as seguintes modalidades: comunicação oral, exposição de banners, relato de experiência e mostra tecnológica. Ademais, propostas de oficinas e minicursos são muito bem-vindas, ao corroborarem com as discussões sob uma perspectiva mais prática.
+              </p>
+              <p><br /></p>
+              <p>
+                Por fim, reiteramos o convite a todos os interessados e desejamos que a II EXPOTEC contribua com o avanço e melhoria da nossa sociedade.
+              </p>
+            </div>
           </div>
         </div>
       </section>
