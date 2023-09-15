@@ -83,6 +83,7 @@ const Home = ({
           <div className="row">
             <div className="col-12">
               <h2>Bem vindos!</h2>
+              <p><br /></p>
               <p>
                 Sejam muito bem-vindos a segunda edição da Exposição Científica, Tecnológica e Cultural (EXPOTEC) do IFRN, campus Ceará-Mirim. O evento tem como objetivo agregar toda a comunidade do IFRN, campus Ceará-Mirim, e demais interessados em prol do compartilhamento da cultura e produção tecnológica e científica que se realiza na área de abrangência do referido campus. Dessa forma, além de se propor a ser um espaço de construção e compartilhamento de conhecimento, o evento também incentiva o eixo artístico-cultural da região.
               </p>
@@ -102,6 +103,26 @@ const Home = ({
           </div>
         </div>
       </section>
+
+      {/* Nova seção de texto */}
+      <section className="section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2>Chamda de trabalhos extendida!</h2>
+              <p><br /></p>
+              <p>
+                A chamada de trabalhos foi extendida até o dia 17 de set. de 2023 23:59h. Aproveite essa oportunidade para submeter seu trabalho!                
+              </p>         
+              <p><br /></p>
+              <p>
+                Clique <Link href="/chamada-de-trabalhos"> aqui </Link> para submeter seu trabalho.
+              </p>                            
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Home main */}
       <section className="section">
