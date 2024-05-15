@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Geeky Nextjs",
+    "title": "Green Blog Template",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
@@ -23,7 +23,7 @@
   "params": {
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
+    "copyright": "Erstellt mit AI-Blogbuilder.com"
   },
   "metadata": {
     "meta_author": "Statichunt",
